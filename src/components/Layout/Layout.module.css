@@ -1,0 +1,35 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Main content styling */
+.main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer styling */
+.footer {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Light theme styles */
+.lightTheme {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+/* Dark theme styles */
+.darkTheme {
+  background-color: rgb(21, 21, 21);
+  color: white;
+}
