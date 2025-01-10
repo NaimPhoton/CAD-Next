@@ -1,35 +1,31 @@
-// src/store/counterSlice.ts
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface CounterState {
-  value: number; // Define the shape of the counter state
+  value: number;
 }
 
 const initialState: CounterState = {
-  value: 0, // Initial counter value
+  value: 0,
 };
 
 const counterSlice = createSlice({
-  name: 'counter', // Slice name
+  name: "counter",
   initialState,
   reducers: {
     increment: (state) => {
-      state.value += 1; // Increment the counter value
+      state.value += 1;
     },
     decrement: (state) => {
-      state.value -= 1; // Decrement the counter value
+      state.value -= 1;
     },
     reset: (state) => {
-      state.value = 0; // Reset the counter value
+      state.value = 0;
     },
     set: (state, action: PayloadAction<number>) => {
-      state.value = action.payload; // Set the counter value
+      state.value = action.payload;
     },
   },
 });
 
-// Export actions for use in components
-export const { increment, decrement, reset, set } = counterSlice.actions;
-
-// Export the reducer to be used in the store
+export const {increment, decrement, reset, set} = counterSlice.actions;
 export default counterSlice.reducer;

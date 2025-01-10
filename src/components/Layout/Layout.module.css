@@ -18,8 +18,15 @@
 
 /* Footer styling */
 .footer {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  gap: 15px;
+}
+
+.footerT {
+  display: flex;
+  justify-content: center;
 }
 
 /* Light theme styles */
