@@ -36,8 +36,10 @@ const Layout: React.FC<LayoutProps> = ({children, title = "My App"}) => {
       <footer className={styles.footer}>
         <ThemeToggle />
         <Button onClick={() => router.back()} text={"Back"} />
-        <p>&copy; {new Date().getFullYear()} My App. All rights reserved.</p>
       </footer>
+      <div className={styles.footerT}>
+        <p>&copy; {new Date().getFullYear()} My App. All rights reserved.</p>
+      </div>
     </div>
   );
 };

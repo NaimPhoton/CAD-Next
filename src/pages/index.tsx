@@ -12,7 +12,9 @@ const HomePage: React.FC = () => {
       <h1>Welcome to the Home Page!</h1>
       <Counter />
       <AuthForm />
-      <Button onClick={() => router.push("login")} text={"Login"} />
+      <div style={{marginTop: 50}}>
+        <Button onClick={() => router.push("login")} text={"Login"} />
+      </div>
     </Layout>
   );
 };
