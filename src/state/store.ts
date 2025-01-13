@@ -1,12 +1,14 @@
 import {configureStore} from "@reduxjs/toolkit";
 import counterReducer from "./slice/counterSlice";
 import themeReducer from "./slice/themeSlice";
+import userReducer from "./slice/userSlice";
 
 // Configure the Redux store
 const store = configureStore({
   reducer: {
     counter: counterReducer, // Add the counter reducer to the store
     theme: themeReducer, // Add the theme reducer to the store
+    user: userReducer,
   },
 });
 
