@@ -21,9 +21,8 @@ const userRegister = async (newUser: NewUser) => {
     if (!result) {
       throw result;
     }
-    console.log("🚀 ~ userRegister ~ result:", result);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
