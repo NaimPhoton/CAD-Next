@@ -6,7 +6,7 @@ export interface NewUser {
   password: string;
 }
 
-interface userLoginType {
+interface UserLogin {
   email: string;
   password: string;
 }
@@ -18,15 +18,15 @@ const userRegister = async (newUser: NewUser) => {
       url: "/register",
       data: newUser,
     });
-    if (!result) {
-      throw result;
+    if (result.status === 200 && result.data) {
+      throw result.data.data;
     }
   } catch (error) {
     console.error(error);
   }
 };
 
-const userLogin = async (userData: userLoginType) => {
+const userLogin = async (userData: UserLogin) => {
   try {
     const result = await axios({
       method: "POST",
